@@ -16,8 +16,6 @@ export function getWeatherData(): Promise<interfaceWeather> {
     )
         .then((res) => res.json())
         .then((data: interfaceWeather) => {
-            console.log("CONEXION LISTA");
-            console.log(data);
             return data;
         });
 }
