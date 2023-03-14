@@ -1,2 +1,2 @@
-# Svelte + TS + Vite
+# Svelte weather app
 
