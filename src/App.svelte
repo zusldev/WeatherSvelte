@@ -7,7 +7,7 @@
     const now = new Date(); // Obtener la hora local actual del usuario
     const hour = now.getHours(); 
 
-    if (hour >= 6 && hour < 20) {
+    if (hour >= 6 && hour < 18) {
         document.body.style.backgroundColor = "#7ed7fe"; // Cambia el color del fondo a blanco si es de día
     } else {
         document.body.style.backgroundColor = "#19313b"; // Cambia el color del fondo a negro si es de noche
