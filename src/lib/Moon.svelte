@@ -74,7 +74,7 @@
     @keyframes slow-float {
         0%,
         100% {
-            transfrom: translateX(0);
+            transform: translateX(0);
         }
         50% {
             transform: translateX(-5px);
