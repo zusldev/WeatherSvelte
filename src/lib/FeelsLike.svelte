@@ -12,7 +12,6 @@
     onMount(async () => {
         weatherData = await getWeatherData();
     });
-
 </script>
 
 {#if weatherData}
@@ -20,13 +19,13 @@
 
     <table
         id="tableinfo"
-        class="divide-y items-center justify-center text-center flex divide-gray-200 bg-white {weatherData.current
-            .is_day
+        class="divide-y items-center justify-center text-center flex divide-gray-200 bg-white {weatherData
+            .current.is_day
             ? 'bg-opacity-60 bg-day'
-            : 'opacity-90'} shadow rounded-lg"
+            : 'bg-opacity-70'} shadow rounded-lg"
     >
-        <tbody class="text-center">
-            <tr class="">
+        <tbody class="">
+            <tr class="border-b-2 border-white/10">
                 <td
                     class="p-10 whitespace-nowrap flex items-center text-4xl font-semibold text-gray-900"
                     >{formatNumber(
@@ -54,7 +53,7 @@
                     </svg>
                     <span class="font-medium text-gray-900">Humedad</span>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
                     >{weatherData?.current?.humidity}%</td
                 >
             </tr>
@@ -73,7 +72,7 @@
                     </svg>
                     <span class="font-medium text-gray-900">Presión</span>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
                     >{formatNumber(weatherData?.current?.pressure_mb)} mb</td
                 >
             </tr>
@@ -93,7 +92,7 @@
                     <span class="font-medium text-gray-900">Visibilidad</span>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                     {formatNumber(weatherData?.current?.vis_km)} km
                 </td>
             </tr>
@@ -118,7 +117,7 @@
                 </td>
 
                 <td
-                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 items-center"
+                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 items-center"
                 >
                     <span
                         >{formatNumber(weatherData?.current?.wind_kph)} km/h</span
@@ -140,7 +139,7 @@
                     >
                     <span class="font-medium text-gray-900">Índice UV</span>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                     {weatherData?.current?.uv} de 10
                 </td>
             </tr>
@@ -149,10 +148,10 @@
 {/if}
 
 <style>
-    @media (min-width: 855px) {
+    @media (min-width: 830px) {
         table {
             width: 100%;
-            max-width: 855px;
+            max-width: 800px;
             margin: 0 auto;
             justify-content: center;
             padding-bottom: 30px;

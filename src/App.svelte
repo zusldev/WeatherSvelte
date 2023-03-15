@@ -16,7 +16,7 @@
     });
 </script>
 
-<main class="p-5 2xl:p-10 bg-cover {!weatherData ? 'bg-day' : 'bg-night'}">
+<main class="p-5 2xl:p-10 bg-cover {is_day ? 'bg-[#21a1c1]' : 'bg-[#13538a]'}">
     <div class="flex justify-between">
         <div class="info">
             <CardWeather />
@@ -28,7 +28,7 @@
     <div class="feelslike mt-16">
         <FeelsLike />
     </div>
-    <div class="createdBy mt-10">
+    <div class="createdBy mt-20">
         <Profile githubUsername="zusldev" />
     </div>
 </main>

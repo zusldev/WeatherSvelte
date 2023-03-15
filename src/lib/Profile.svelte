@@ -15,10 +15,10 @@
 {#if weatherData}
     <div
         id="profile"
-        class="rounded-lg flex items-center justify-center text-center overflow-hidden shadow-lg bg-white p-3 {weatherData
+        class="rounded-lg flex items-center justify-center text-center overflow-hidden bg-white p-3 {weatherData
             .current.is_day
             ? 'bg-opacity-60 bg-day'
-            : 'opacity-90'} "
+            : 'bg-opacity-70'} "
     >
         <img
             class="w-24 h-24 rounded-full"
@@ -27,22 +27,22 @@
         />
 
         <div class="px-4">
-            <h2 class="font-bold text-xl mb-2">@{githubUsername}</h2>
+            
             <a
                 href={`https://github.com/${githubUsername}`}
                 target="_blank"
-                class="text-blue-500 hover:underline"
-                >github.com/{githubUsername}</a
+                class="hover:underline font-bold text-xl mb-2"
+                >@zusldev</a
             >
         </div>
     </div>
 {/if}
 
 <style>
-    @media (min-width: 855px) {
+    @media (min-width: 835px) {
         #profile {
             width: 100%;
-            max-width: 855px;
+            max-width: 800px;
             margin: 0 auto;
             justify-content: center;
         }
